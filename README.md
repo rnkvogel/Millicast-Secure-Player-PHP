@@ -8,9 +8,11 @@ For this example create stream lable secure and select any stream name.
 Under settings you will see label as secure. You can set token as required.
 
 You can take the PHP example and place on your PHP hosting provider.
+
 Change line 11: $headers[] = 'Authorization: Bearer FROM_MILLICAT_PORTAL_ACCOUNT_API_TOKEN';
 FROM_MILLICAT_PORTAL_ACCOUNT_API_TOKEN can be found the account drop down in your Millicast portal.
 API Secret
+
 Change line 58:     var accountID = "YOURID" + "/";
 YOURID can be found as your ACCOUNT ID in the API broadcast tab.
 
