@@ -62,19 +62,18 @@ if(pair[0] == variable){return pair[1];}
 return(false);
 }
 
-    var viewer = "https://viewer.millicast.com/v2?streamId=";
-    var accountID = "YOURID" + "/";
-   var vid =  getQueryVariable("id");
-    var vid_esc = decodeURI(vid);
-	var muted = "&muted=false";//works for sound and autoplay
-	var token = (obj["data"]["token"]); 
-   
-    var http = viewer + accountID + vid + "&token=" + token ;
-  function myFunction() {
+ var viewer = "https://viewer.millicast.com/v2?streamId=";
+ var accountID = "YOURID" + "/";
+ var vid =  getQueryVariable("id");
+ var vid_esc = decodeURI(vid);
+ var muted = "&muted=false";//works for sound and autoplay
+ var token = (obj["data"]["token"]); 
+ var http = viewer + accountID + vid + "&token=" + token ;
+	//var http = viewer + accountID + vid + "&token=" + token = muted ; //Autoplay with audio works on Chrome
+ function myFunction() {
   document.getElementById("source").src = http;
 }
 //alert(http);
-
 var a = document.createElement('iframe');
 a.setAttribute('id','video'); // assign an id
 a.src =  http ; //add your iframe path here
