@@ -21,6 +21,14 @@ curl_close($ch);
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+html, body {
+  margin: 0;
+  height: 100%;             /* need for iframe height 100% to work */
+}
+</style>
+</head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
@@ -56,21 +64,26 @@ return(false);
 
     var viewer = "https://viewer.millicast.com/v2?streamId=";
     var accountID = "YOURID" + "/";
-    var vid =  getQueryVariable("id");
+   var vid =  getQueryVariable("id");
     var vid_esc = decodeURI(vid);
+	var muted = "&muted=false";
 	var token = (obj["data"]["token"]); 
    
-    var http = viewer + accountID + vid + "&token=" + token;
+    var http = viewer + accountID + vid + "&token=" + token + muted;
   function myFunction() {
   document.getElementById("source").src = http;
 }
 //alert(http);
 
 var a = document.createElement('iframe');
-a.src =  http; //source created here
-a.width = "800";
-a.height = "600";
-document.querySelector('body').appendChild(a)
+a.setAttribute('id','video'); // assign an id
+a.src =  http ; //add your iframe path here
+a.width = "100%";
+a.height = "100%";
+a.setAttribute('allowFullscreen','true');
+a.setAttribute('allow', 'autoplay');
+a.setAttribute('frameBorder', '0');
+document.querySelector('body').ap
 </script>
 </body>
 </html>
