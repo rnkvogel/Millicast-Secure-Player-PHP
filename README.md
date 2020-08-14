@@ -1,4 +1,6 @@
 Creating simple PHP player to view your secure stream on your hosting provider with your Millicast account.
+The code can be modified to use other languages as desired.
+
 
 Requires a Millicast.com account.
 You can view the API and docs to find additional information.
