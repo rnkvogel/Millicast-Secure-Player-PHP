@@ -66,10 +66,10 @@ return(false);
     var accountID = "YOURID" + "/";
    var vid =  getQueryVariable("id");
     var vid_esc = decodeURI(vid);
-	var muted = "&muted=false";
+	var muted = "&muted=false";//works for sound and autoplay
 	var token = (obj["data"]["token"]); 
    
-    var http = viewer + accountID + vid + "&token=" + token + muted;
+    var http = viewer + accountID + vid + "&token=" + token ;
   function myFunction() {
   document.getElementById("source").src = http;
 }
