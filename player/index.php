@@ -69,7 +69,7 @@ return(false);
  var muted = "&muted=false";//works for sound and autoplay
  var token = (obj["data"]["token"]); 
  var http = viewer + accountID + vid + "&token=" + token ;
-	//var http = viewer + accountID + vid + "&token=" + token = muted ; //Autoplay with audio works on Chrome
+	//var http = viewer + accountID + vid + "&token=" + token = muted ; //Autoplay with audio works on Chrome Edge if you had user log into site or interacted with site.
  function myFunction() {
   document.getElementById("source").src = http;
 }
