@@ -25,6 +25,10 @@ l=Label   //If you named it something else then secure
 
 https://YOURSITE.com/player/index.php?id=SteamName&l=secure
 
+I have added a sample simple Login.php example to show how to secure the link if needed.
+This is generally pulled from a DB.
+
+
 
 
 
