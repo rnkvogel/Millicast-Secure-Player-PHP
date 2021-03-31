@@ -7,7 +7,7 @@ $headers[] = 'Authorization: Bearer YOUR_API_SECRET_KEY';
 $headers[] = 'Content-Type: application/json';
 $streamName = 'YOUR_STREAM_NAME';
 $accountId = 'MILLICAST_ACCOUNT_ID';
-$label = 'YOUR_STREA_LABEL';
+$label = 'YOUR_STREAM_LABEL';
 $allowedDomains = 'YOUR_SECURE_DOMAIN';
 error_reporting(E_ALL);
 $ch = curl_init();
