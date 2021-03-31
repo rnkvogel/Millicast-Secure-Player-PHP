@@ -9,24 +9,39 @@ Create a secure stream name.
 For this example create stream lable secure and select any stream name.
 Under settings you will see label as secure. You can set token as required.
 
-You can take the PHP example and place on your PHP hosting provider.
+This example will include Domain restrictions. We are going to create the token in your portal using cUrl
+https://reqbin.com/curl
 
-Change line 11: $headers[] = 'Authorization: Bearer FROM_MILLICAT_PORTAL_ACCOUNT_API_TOKEN';
-FROM_MILLICAT_PORTAL_ACCOUNT_API_TOKEN can be found the account drop down in your Millicast portal.
-API Secret
+curl -H "Authorization: Bearer YOUR_MILLICAST_API_KEY" \
+     -H "Content-Type: application/json" \
+     https://api.millicast.com/api/publish_token/ \
+     -d '{"subscribeRequiresAuth": true, "label": "YOUR_LABEL_NAME", "streams": [{"streamName": "YOUR_STREAM_LABEL"}], "allowedOrigins": ["YOUR_DOMAIN"]}'
+     
+     
+Once you have run the Curl call check your portal to see the newley created stream label.
+You will be using the new label and token to publish your stream.
 
-Change line 58:     var accountID = "YOURID" + "/";
-YOURID can be found as your ACCOUNT ID in the API broadcast tab.
+Install the player on your PHP Web Host.
 
-Navigate to your site and change
-YOURSITE
-id=StreamName  //Using built in broadcaster you will see name populated in the top left.
-l=Label   //If you named it something else then secure
+On Index.php upodated the following lines.
 
-https://YOURSITE.com/player/index.php?id=SteamName&l=secure
+$headers[] = 'Authorization: Bearer YOUR_API_SECRET_KEY';
+$streamName = 'YOUR_STREAM_NAME';
+$accountId = 'MILLICAST_ACCOUNT_ID';
+$label = 'YOUR_STREAM_LABEL';
+$allowedDomains = 'YOUR_SECURE_DOMAIN';
 
-I have added a sample simple Login.php example to show how to secure the link if needed.
-This is generally pulled from a DB.
+Test the player with your secure stream. 
+https://YOUR_SECURE_DOMAIN.com/player/index.php
+
+
+
+
+
+
+
+
+
 
 
 
