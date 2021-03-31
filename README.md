@@ -12,6 +12,8 @@ Under settings you will see label as secure. You can set token as required.
 This example will include Domain restrictions. We are going to create the token in your portal using cUrl
 https://reqbin.com/curl
 
+UPDATE THE CAPS WITH YOUR INFORMATION!!
+
 curl -H "Authorization: Bearer YOUR_MILLICAST_API_KEY" \
      -H "Content-Type: application/json" \
      https://api.millicast.com/api/publish_token/ \
