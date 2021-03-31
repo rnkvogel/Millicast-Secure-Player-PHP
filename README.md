@@ -32,7 +32,10 @@ $label = 'YOUR_STREAM_LABEL';
 $allowedDomains = 'YOUR_SECURE_DOMAIN';
 
 Test the player with your secure stream. 
+
 https://YOUR_SECURE_DOMAIN.com/player/index.php
+
+This player has a viewer count and offline recconect if the internet goes down for the viewer.
 
 
 
