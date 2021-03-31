@@ -14,7 +14,6 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-#curl_setopt($ch, CURLOPT_POSTFIELDS, '{"subscribesAuth": true, "label": "'. $label.'", "streams": [{"streamName":"'. $streamName.'"}], "allowedOrigins": ["huhtm4.cloud.influxis.com", "*.millicast.com"]}');
 curl_setopt($ch, CURLOPT_POSTFIELDS, '{"subscribesAuth": true, "label": "'. $label.'", "streams": [{"streamName":"'. $streamName.'"}], "allowedOrigins": ["'.$allowedDomains.'"]}');
 $result = curl_exec($ch);;
 
