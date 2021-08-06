@@ -14,10 +14,14 @@ https://reqbin.com/curl
 
 UPDATE THE CAPS WITH YOUR INFORMATION!!
 
+<code>
 curl -H "Authorization: Bearer YOUR_MILLICAST_API_KEY" \
      -H "Content-Type: application/json" \
      https://api.millicast.com/api/publish_token/ \
      -d '{"subscribeRequiresAuth": true, "label": "YOUR_LABEL_NAME", "streams": [{"streamName": "YOUR_STREAM_LABEL"}], "allowedOrigins": ["YOUR_DOMAIN"]}'
+     
+    
+
      
      
 Once you have run the Curl call check your portal to see the newley created stream label.
@@ -27,12 +31,15 @@ Install the player on your PHP Web Host.
 
 On Index.php upodated the following lines.
 
+<code>
 $headers[] = 'Authorization: Bearer YOUR_API_SECRET_KEY';
 $streamName = 'YOUR_STREAM_NAME';
 $accountId = 'MILLICAST_ACCOUNT_ID';
 $label = 'YOUR_STREAM_LABEL';
 $allowedDomains = 'YOUR_SECURE_DOMAIN';
 
+     
+     
 Test the player with your secure stream. 
 
 https://YOUR_SECURE_DOMAIN.com/player/index.php
