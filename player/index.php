@@ -73,7 +73,7 @@ $token=  $result['data']['token'];
     <input type="hidden" id="id"  value=<?php echo $streamName;?> >
 	  <input type="hidden"  id="account" value=<?php echo $accountId;?> >
 
-<video id="player" disablePictureInPicture controlsList="nodownload" autoplay muted playsinline poster="images/starting.png" >
+<video id="player" disablePictureInPicture controlsList="nodownload" autoplay contols muted playsinline poster="images/starting.png" >
   <!--   <source src="video/test.mp4" type="video/mp4">   --> </video>
 </div>
 
