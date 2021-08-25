@@ -18,7 +18,7 @@ UPDATE THE CAPS WITH YOUR INFORMATION!!
 curl -H "Authorization: Bearer YOUR_MILLICAST_API_KEY" \
      -H "Content-Type: application/json" \
      https://api.millicast.com/api/publish_token/ \
-     -d '{"subscribeRequiresAuth": true, "label": "YOUR_LABEL_NAME", "streams": [{"streamName": "YOUR_STREAM_NAME"}], "allowedOrigins": ["YOUR_DOMAIN", "*.millicast.com"]}'
+     -d '{"subscribeRequiresAuth": true, "label": "YOUR_LABEL_LABEL", "streams": [{"streamName": "YOUR_STREAM_NAME"}], "allowedOrigins": ["YOUR_DOMAIN", "*.millicast.com"]}'
      
     
 
